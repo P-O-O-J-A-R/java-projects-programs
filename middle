@@ -1,0 +1,12 @@
+// Method that returns middle character
+class middle {
+  public static String getMiddle(String word) {
+    int mid = (word.length()/2) ;
+    int even = word.length()%2 ;
+    
+    if(even%2 == 0)
+       return word.substring(mid-1, mid+1);
+    else
+      return (word.charAt(mid)+"");
+  }
+}
