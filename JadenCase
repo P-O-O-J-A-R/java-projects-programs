@@ -1,0 +1,23 @@
+//returns JadenCase string
+public class JadenCase {
+
+  public String toJadenCase(String phrase) {
+    if((phrase == null) || phrase.isEmpty())
+      return null;
+    String phrases[] = phrase.split(" ");
+    
+    for(int i=0; i<phrases.length; i++)
+    {
+      String intial = phrases[i].charAt(0)+"";
+      intial = intial.toUpperCase();
+      phrases[i] = intial+phrases[i].substring(1) ;
+    }
+    
+    String finalPhrase = "";
+    for (String item : phrases) {
+      finalPhrase+= item+" ";
+    }
+    return finalPhrase.trim();
+  }
+
+}
