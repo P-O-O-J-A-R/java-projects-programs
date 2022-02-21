@@ -1,0 +1,20 @@
+//Method tht sorts words in sentence where each word contains number
+public class Order {
+  public static String order(String words) {
+    if(words.length() ==0)
+      return "";
+   String[] wordArr = words.split(" ");
+    String[] numArr = words.replaceAll("[a-zA-Z]", "").split(" ");
+    String[] newWordArr =  new String[wordArr.length];
+      for(int i=0; i<wordArr.length;i++)
+      {
+        int j = Integer.parseInt(numArr[i]);
+        newWordArr[j-1] = wordArr[i];
+      }
+      String newWords = "";
+      for (String newWord:newWordArr) {
+        newWords+= newWord+" ";
+      }
+    return newWords.trim();
+  }
+}
