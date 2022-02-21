@@ -1,0 +1,8 @@
+// Return a string of the number
+
+class Conversion {
+  public static String numberToString(int num) {
+    // Return a string of the number here!
+    return num+"";
+  }
+}
