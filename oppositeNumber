@@ -1,0 +1,8 @@
+//Method retirning opposite number
+public class oppositeNumber
+    {
+        public static int opposite(int number)
+        {
+            return 0-number;
+        }
+    }
