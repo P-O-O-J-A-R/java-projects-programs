@@ -1,0 +1,19 @@
+// Method that counts duplicate letters
+public class CountingDuplicates {
+  public static int duplicateCount(String text) {
+   text = text.toLowerCase() ;
+    int cnt = 0;
+  while(text.length() > 0)
+    {
+      String pattern = text.substring(0,1) ;
+      if(text.substring(1).contains(pattern))
+      {
+        cnt++;
+        text = text.replaceAll(pattern,"");
+      }
+      else
+        text = text.replace(pattern,"");
+    }
+    return cnt ;
+  }
+}
